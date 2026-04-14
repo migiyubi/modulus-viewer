@@ -18,6 +18,7 @@ export class Color {
     static get Black() { return 2; }
     static get Blue() { return 3; }
     static get Yellow() { return 4; }
+    static get Red() { return 5; }
 
     static _instance = null;
 
@@ -106,5 +107,10 @@ const master = [
         enumeration: Color.Yellow,
         threeCode: 0xffbb66,
         displayName: 'yellow'
+    },
+    {
+        enumeration: Color.Red,
+        threeCode: 0xc43838,
+        displayName: 'red'
     }
 ];
