@@ -64,6 +64,10 @@ body {
   display: flex;
 }
 
+#color-selector .icon {
+  cursor: pointer;
+}
+
 .color-panel {
   cursor: pointer;
   position: relative;
