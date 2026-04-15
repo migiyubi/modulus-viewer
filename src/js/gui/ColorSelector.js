@@ -34,32 +34,15 @@ export class ColorSelector {
 
     onClickPanel(e) {
         const tgt = e.currentTarget;
+        const c = tgt.dataset.colorCode;
 
-        if (tgt.classList.contains('focus-on')) {
-            for (const p of this._panels) {
-                const c = p.dataset.colorCode;
+        this._visibilities[c] = !this._visibilities[c];
 
-                p.classList.remove('focus-on');
-                p.classList.remove('invisible');
-
-                this._visibilities[c] = true;
-            }
+        if (this._visibilities[c]) {
+            tgt.classList.remove('invisible');
         }
         else {
-            for (const p of this._panels) {
-                const c = p.dataset.colorCode;
-
-                if (p === tgt) {
-                    p.classList.add('focus-on');
-                    p.classList.remove('invisible');
-                    this._visibilities[c] = true;
-                }
-                else {
-                    p.classList.remove('focus-on');
-                    p.classList.add('invisible');
-                    this._visibilities[c] = false;
-                }
-            }
+            tgt.classList.add('invisible');
         }
 
         this._onChange(this._visibilities);

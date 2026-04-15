@@ -72,17 +72,6 @@ body {
   height: 24px;
   border: 1px solid #1a1d21;
 }
-.color-panel.focus-on:before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 50%;
-  height: 50%;
-  top: calc(25% - 1px);
-  left: calc(25% - 1px);
-  border-radius: 50%;
-  border: 1px solid #1a1d21;
-}
 .color-panel.invisible:before {
   position: absolute;
   content: "";
